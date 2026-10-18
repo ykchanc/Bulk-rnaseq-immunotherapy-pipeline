@@ -561,7 +561,7 @@ def generate_and_save_f1_scores(results, output_dir, prefix="model_setting"):
     # Render in notebook
     plt.show()
 
-"""### 4.2 Plotting 5-fold cv data"""
+"""### 4.2 Plotting graphs"""
 
 import os
 import pickle
