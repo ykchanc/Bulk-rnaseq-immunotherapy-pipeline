@@ -945,7 +945,7 @@ def run_svc_external_cv(
             'confusion_matrix': confusion_matrix(y_test_np, y_pred),
             'y_test': y_test_np,
             'y_pred': y_pred,
-            'y_score': y_score, # Changed y_prob to y_score
+            'y_score': y_score, 
             'n_features_used': n_features,
             'selected_features': selected_feature_names
         }
