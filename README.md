@@ -20,22 +20,23 @@ This repository implements a scikit-learn based machine learning pipeline for pr
 ### Analysis Workflow
 
 1. **Data Preprocessing**
-    - 01_data_preprocessing_and_batch_correction.py
     - Align the data in TPM, gene filtering, batch-effect correction
+      - 01_data_preprocessing_and_batch_correction.py
 2. **Feature selection and model training with whole transcriptome as input**
-    - 02_allgenes_boruta_standardscaler_logistic_regression.py
-    - 03_allgenes_boruta_powertransformer_logistic_regression.py
-    - Using boruta for feature selection and logistic regression for classification. 
+    - Using boruta for feature selection and logistic regression for classification.
+      - 02_allgenes_boruta_standardscaler_logistic_regression.py
+      - 03_allgenes_boruta_powertransformer_logistic_regression.py
 3. **Feature selection and model training with GSVA features as input**
-    - 04_gsva_xgb_withoptuna_survival.py
-    - 05_gsva_rfe_logreg_withoptuna_survival.py
-    - 06_gsva_rfe_svc_withoptuna_survival.py
     - Using GSVA to generate pathway activity matrix first, then the pathways were used as input features for model training. Optuna was used for hyperparameter tuning. XGBoost (xgb) and Recursive Feature Elimination (rfe) were used for feature selection. XGBoost, Logistic Regression (logreg) and Support Vector Classifier (svc) were used for model training.
+      - 04_gsva_xgb_withoptuna_survival.py
+      - 05_gsva_rfe_logreg_withoptuna_survival.py
+      - 06_gsva_rfe_svc_withoptuna_survival.py
 4. **Feature selection and model training with xCell features as input**
-    - 07_xcell_lasso_svc_withoptuna_survival.py
-    - 08_xcell_lasso_logisticregression_withoptuna_survival.py
-    - 09_xcell_xgboost_withoptuna_survival.py
     - Using xCell for cell deconvolution to generate immune/stromal cells proportions first, then the matrix was used as input for model training. Optuna was used for hyperparameter tuning. XGBoost (xgb) and LASSO were used for feature selection. XGBoost, Logistic Regression (logreg) and Support Vector Classifier (svc) were used for model training.
+       - 07_xcell_lasso_svc_withoptuna_survival.py
+       - 08_xcell_lasso_logisticregression_withoptuna_survival.py
+       - 09_xcell_xgboost_withoptuna_survival.py
+
 ---
 
 ## Workflow Chart
